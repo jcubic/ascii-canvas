@@ -17,6 +17,10 @@ class Item {
     clone() {
         return new Item(text, { x: this._x, y: this._y, z: this._z });
     }
+    update(text) {
+        this._text = text;
+        return this;
+    }
     move({x = auto, y = auto, z = auto} = {}) {
         if (x !== auto) {
             this._x = x;
