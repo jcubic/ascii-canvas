@@ -5,7 +5,7 @@
  * Relased under MIT license
  */
 
-import unix from 'jquery.terminal/js/unix_formatting';
+import unix from 'jquery.terminal/js/unix_formatting.js';
 
 export const ROWS = 24;
 export const COLS = 80;

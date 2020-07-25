@@ -7,7 +7,8 @@
 
 import ervy from 'ervy';
 import boxen from 'boxen';
-import { stringifyTree } from 'stringify-tree';
+import pkg from 'stringify-tree';
+const { stringifyTree } = pkg;
 
 const tree = {
     name: "Grandmarti", children: [
@@ -25,8 +26,8 @@ const tree = {
     ],
 };
 
-import { Canvas, Item } from '../src/';
-import { ROWS, COLS, from_ansi } from './terminal';
+import { Canvas, Item } from '../src/index.js';
+import { ROWS, COLS, from_ansi } from './terminal.js';
 
 
 const canvas = new Canvas(COLS, ROWS);
