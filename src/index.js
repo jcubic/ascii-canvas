@@ -5,7 +5,7 @@
  * Relased under MIT license
  */
 
-import Canvas from './Canvas';
-import Item from './Item';
+import Canvas from './Canvas.js';
+import Item from './Item.js';
 
 export { Canvas, Item };

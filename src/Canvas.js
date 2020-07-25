@@ -5,7 +5,7 @@
  * Relased under MIT license
  */
 
-import { auto } from './constants';
+import { auto } from './constants.js';
 
 class Canvas {
     constructor(width, height) {
@@ -51,7 +51,7 @@ class Canvas {
     _draw(matrix, string, x, y) {
         let i = x;
         if (x > 0) {
-            for (let i = x - 1; i--;) {
+            for (let i = x; i--;) {
                 if (!matrix[y][i]) {
                     matrix[y][i] = ' ';
                 }

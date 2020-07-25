@@ -5,7 +5,7 @@
  * Relased under MIT license
  */
 
-import { auto } from './constants';
+import { auto } from './constants.js';
 
 class Item {
     constructor(text, {x = 0, y = 0, z = auto} = {}) {
