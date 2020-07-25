@@ -24,7 +24,7 @@ const { Canvas, Item } = require('ascii-canvas');
 ### Browser
 
 ```html
-<script src="https://unpkg.com/isomorphic-lolcat"></script>
+<script src="https://unpkg.com/ascii-canvas"></script>
 <script>
 const { Canvas, Item } = canvas;
 </script>
@@ -35,7 +35,7 @@ const { Canvas, Item } = canvas;
 ```javascript
 const ROWS = 24;
 const COLS = 80;
-const myCanvas = new Canvas(COLS, ROWS);
+const my_canvas = new Canvas(COLS, ROWS);
 
 // see boxen on npm
 const str = boxen('unicorn', { padding: 1 });
@@ -47,10 +47,10 @@ for (var i = 0; i < 3; ++i) {
   const x = i * 10;
   const y = i * 3;
   const box = new Item(str, { x: x_start + x, y: y_start + y });
-  myCanvas.append(box);
+  my_canvas.append(box);
 }
 
-console.log(myCanvas.toString());
+console.log(my_canvas.toString());
 ```
 
 ![Terminal Screenshot](https://github.com/jcubic/ascii-canvas/blob/master/assets/screenshot.png?raw=true)
