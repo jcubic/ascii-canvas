@@ -66,10 +66,8 @@ git clone https://github.com/jcubic/ascii-canvas.git
 cd ascii-canvas
 # install example ASCII libraries
 npm install boxen ervy jquery.terminal stringify-tree
-# install ES loader
-npm install -g esm
 # run the code
-node -r esm ./demo/demo.js
+node --experimental-modules ./demo/demo.js
 ```
 
 ## API
