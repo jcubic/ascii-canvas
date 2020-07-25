@@ -49,7 +49,7 @@ class Canvas {
         return matrix;
     }
     _draw(matrix, string, x, y) {
-        let i = x - 1;
+        let i = x;
         if (x > 0) {
             for (let i = x - 1; i--;) {
                 if (!matrix[y][i]) {
