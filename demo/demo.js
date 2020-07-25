@@ -25,7 +25,7 @@ const tree = {
     ],
 };
 
-import { Canvas, Item } from '..';
+import { Canvas, Item } from '../src/';
 import { ROWS, COLS, from_ansi } from './terminal';
 
 

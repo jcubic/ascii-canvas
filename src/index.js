@@ -5,7 +5,7 @@
  * Relased under MIT license
  */
 
-import Canvas from './src/Canvas';
-import Item from './src/Item';
+import Canvas from './Canvas';
+import Item from './Item';
 
 export { Canvas, Item };
