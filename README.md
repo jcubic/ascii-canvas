@@ -40,10 +40,13 @@ const myCanvas = new Canvas(COLS, ROWS);
 // see boxen on npm
 const str = boxen('unicorn', { padding: 1 });
 
+const x_start = 10;
+const y_start = 5;
+
 for (var i = 0; i < 3; ++i) {
   const x = i * 10;
   const y = i * 3;
-  const box = new Item(str, { x: 20 + x, y: 8 + y });
+  const box = new Item(str, { x: x_start + x, y: y_start + y });
   myCanvas.append(box);
 }
 
