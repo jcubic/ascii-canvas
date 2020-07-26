@@ -7,11 +7,19 @@
 
 import { auto } from './constants.js';
 
+function to_valid_int(num) {
+    num = Math.round(num);
+    if (num < 0) {
+        return 0;
+    }
+    return num;
+}
+
 class Item {
     constructor(text, {x = 0, y = 0, z = auto} = {}) {
         this._text = text;
-        this._x = x;
-        this._y = y;
+        this._x = to_valid_int(x);
+        this._y = to_valid_int(y);
         this._z = z;
     }
     clone() {

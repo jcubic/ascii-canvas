@@ -1,6 +1,6 @@
 ![ASCII Canvas Logo](https://github.com/jcubic/ascii-canvas/blob/master/assets/logo.svg?raw=true)
 
-[![npm](https://img.shields.io/badge/npm-0.1.0-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
+[![npm](https://img.shields.io/badge/npm-0.1.1-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
 [![LICENSE MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jcubic/ascii-canvas/blob/master/LICENSE)
 
 ASCII canvas is library that help position elements on the screen. I can be used
@@ -96,6 +96,7 @@ class Item {
 
 ## Changelog
 
+* 0.1.1 fix infinite loop when x or y is float
 * 0.1.0 Initial version
 
 ## License
