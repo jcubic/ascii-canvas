@@ -43,6 +43,8 @@ const str = boxen('unicorn', { padding: 1 });
 const x_start = 10;
 const y_start = 5;
 
+myCanvas.append(new Item(frame()));
+
 for (var i = 0; i < 3; ++i) {
   const x = i * 10;
   const y = i * 3;
@@ -51,6 +53,23 @@ for (var i = 0; i < 3; ++i) {
 }
 
 console.log(my_canvas.toString());
+
+// functions to render box frame
+function rep(str, count) {
+    return new Array(count).fill(str).join('');
+}
+
+function frame() {
+    const output = [];
+    const x_count = COLS - 2;
+    const y_Count = ROWS - 2;
+    output.push(`+${rep('-', x_count)}+`);
+    for (let i = 0; i < y_Count; ++i) {
+        output.push(`|${rep(' ', x_count)}|`);
+    }
+    output.push(`+${rep('-', x_count)}+`);
+    return output.join('\n');
+}
 ```
 
 ![Terminal Screenshot](https://github.com/jcubic/ascii-canvas/blob/master/assets/screenshot.png?raw=true)
