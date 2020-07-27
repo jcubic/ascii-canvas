@@ -19,6 +19,8 @@ npm install ascii-canvas
 
 ```javascript
 const { Canvas, Item } = require('ascii-canvas');
+// or
+import { Canvas, Item } from 'ascii-canvas';
 ```
 
 ### Browser
@@ -72,7 +74,7 @@ function frame() {
 }
 ```
 
-![Terminal Screenshot](https://github.com/jcubic/ascii-canvas/blob/master/assets/screenshot.png?raw=true)
+![Terminal Screenshot](https://github.com/jcubic/ascii-canvas/blob/master/assets/screenshot.png?raw=true&nocache=1)
 
 ## Demo
 
