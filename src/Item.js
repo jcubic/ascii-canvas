@@ -23,7 +23,7 @@ class Item {
         this._z = z;
     }
     clone() {
-        return new Item(text, { x: this._x, y: this._y, z: this._z });
+        return new Item(this._text, { x: this._x, y: this._y, z: this._z });
     }
     update(text) {
         this._text = text;
@@ -41,10 +41,13 @@ class Item {
         }
         return this;
     }
-    set canvas(c) {
+    remove() {
         if (this._canvas) {
             this._canvas.remove_child(this);
         }
+    }
+    set canvas(c) {
+        this.remove();
         this._canvas = c;
     }
     get canvas() {

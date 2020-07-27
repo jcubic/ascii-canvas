@@ -1,6 +1,6 @@
 {
   "name": "ascii-canvas",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "String based text rendering for Node and Browser",
   "type": "module",
   "main": "./src/index.js",
