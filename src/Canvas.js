@@ -49,6 +49,12 @@ class Canvas {
         return matrix;
     }
     _draw(matrix, string, x, y) {
+        if (x > this._width - string.length) {
+            throw new Error('x out of band');
+        }
+        if (y > this._height - 1) {
+            throw new Error('y out of band');
+        }
         let i = x;
         if (x > 0) {
             for (let i = x; i--;) {
