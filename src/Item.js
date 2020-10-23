@@ -16,8 +16,8 @@ function to_valid_int(num) {
 }
 
 class Item {
-    constructor(text, {x = 0, y = 0, z = auto} = {}) {
-        this._text = text;
+    constructor(text = '', {x = 0, y = 0, z = auto} = {}) {
+        this.update(text);
         this._x = to_valid_int(x);
         this._y = to_valid_int(y);
         this._z = z;
@@ -27,6 +27,9 @@ class Item {
     }
     update(text) {
         this._text = text;
+        const lines = text.split('\n');
+        this._height = lines.length;
+        this._width = Math.max(...lines.map(line => line.length));
         return this;
     }
     move({x = auto, y = auto, z = auto} = {}) {
@@ -64,6 +67,21 @@ class Item {
     }
     get z() {
         return this._z;
+    }
+    get rect() {
+        return {
+            x: this._x,
+            y: this._y,
+            z: this._z,
+            width: this._width,
+            height: this._height
+        };
+    }
+    get width() {
+        return this._width;
+    }
+    get height() {
+        return this._height;
     }
 }
 
