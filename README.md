@@ -85,8 +85,8 @@ To see demo in Node.js you need to do those steps.
 # clone repo
 git clone https://github.com/jcubic/ascii-canvas.git
 cd ascii-canvas
-# install example ASCII libraries
-npm install boxen ervy jquery.terminal stringify-tree
+# install dev dependencies (including example ASCII libraries)
+npm install
 # run the code
 node --experimental-modules ./demo/demo.js
 ```
