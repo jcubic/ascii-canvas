@@ -97,10 +97,12 @@ node --experimental-modules ./demo/demo.js
 
 ```javascript
 class Canvas {
-    constructor(width, height);
-    remove_child(item);
+    constructor(width, height, { overflow: true || false });
+    remove(item);
+    resize(width, height);
     append(item);
     toString();
+    get children;
 }
 ```
 
@@ -113,6 +115,12 @@ class Item {
     remove();
     update(string)
     move({x,y,z});
+    get width;
+    get height;
+    get x;
+    get y;
+    get z;
+    get rect;
 }
 ```
 
