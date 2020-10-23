@@ -121,6 +121,7 @@ class Item {
 * add Canvas::resize
 * add read only Canvas::children
 * add overflow option to Canvas
+* fix negative y when rendering item
 ### 0.2.0
 * add Item::remove
 * fix Item::clone

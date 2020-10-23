@@ -60,7 +60,7 @@ class Canvas {
         return i < this._width || this._options.overflow;
     }
     _draw(matrix, string, x, y) {
-        if (y > this._height - 1 && !this._options.overflow) {
+        if (y < 0 || (y > this._height - 1 && !this._options.overflow)) {
             return;
         }
         let i = x;
