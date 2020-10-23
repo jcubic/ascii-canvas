@@ -117,7 +117,10 @@ class Item {
 ```
 
 ## Changelog
-
+### 0.3.0
+* add Canvas::resize
+* add read only Canvas::children
+* add overflow option to Canvas
 ### 0.2.0
 * add Item::remove
 * fix Item::clone

@@ -8,13 +8,17 @@
 import { auto } from './constants.js';
 
 class Canvas {
-    constructor(width, height) {
+    constructor(width, height, options = { overflow: false }) {
         this._width = width;
         this._height = height;
         this._items = [];
         this._top_z = 0;
+        this._options = options;
     }
-    remove_child(item) {
+    get children() {
+        return this._items;
+    }
+    remove(item) {
         for (const i in this._items) {
             const { item: search } = this._items[i];
             if (search === item) {
@@ -23,6 +27,10 @@ class Canvas {
             }
         }
         return this;
+    }
+    resize(width, height) {
+        this._width = width;
+        this._height = height;
     }
     append(item) {
         let z;
@@ -44,26 +52,29 @@ class Canvas {
     _matrix() {
         const matrix = [];
         for (let i = this._height; i--;) {
-            matrix.push([]);
+            matrix.push(new Array(this._width));
         }
         return matrix;
     }
+    _in_bound(i) {
+        return i < this._width || this._options.overflow;
+    }
     _draw(matrix, string, x, y) {
-        if (x > this._width - string.length) {
-            throw new Error('x out of band');
-        }
-        if (y > this._height - 1) {
-            throw new Error('y out of band');
+        if (y > this._height - 1 && !this._options.overflow) {
+            return;
         }
         let i = x;
         if (x > 0) {
             for (let i = x; i--;) {
-                if (!matrix[y][i]) {
+                if (!matrix[y][i] && this._in_bound(i)) {
                     matrix[y][i] = ' ';
                 }
             }
         }
         for (const chr of string) {
+            if (!this._in_bound(i)) {
+                break;
+            }
             matrix[y][i++] = chr;
         }
     }
