@@ -3,8 +3,9 @@
 [![npm](https://img.shields.io/badge/npm-0.2.0-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
 [![LICENSE MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jcubic/ascii-canvas/blob/master/LICENSE)
 
-ASCII canvas is library that help position elements on the screen. I can be used
-with Node.js or Browser to render ASCII Text. I can be used with other ASCII libraries
+[ASCII canvas is library that help position elements on the screen](https://github.com/jcubic/ascii-canvas).
+
+I can be used with Node.js or Browser to render ASCII Text. I can be used with other ASCII libraries
 like charts and position them on the screen.
 
 ## Installation
