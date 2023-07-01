@@ -30,7 +30,7 @@ import { Canvas, Item } from '../src/index.js';
 import { ROWS, COLS, from_ansi } from './terminal.js';
 
 
-const canvas = new Canvas(COLS, ROWS);
+const canvas = new Canvas(45, ROWS);
 
 const str = boxen('unicorn', { padding: 1 });
 

@@ -1,6 +1,6 @@
 ![ASCII Canvas Logo](https://github.com/jcubic/ascii-canvas/blob/master/assets/logo.svg?raw=true)
 
-[![npm](https://img.shields.io/badge/npm-0.2.0-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
+[![npm](https://img.shields.io/badge/npm-0.3.0-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
 [![LICENSE MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jcubic/ascii-canvas/blob/master/LICENSE)
 
 [ASCII canvas is library that help position elements on the screen](https://github.com/jcubic/ascii-canvas).
@@ -145,5 +145,5 @@ class Item {
 
 ## License
 
-Copyright (C) 2020 [Jakub T. Jankiewicz](https://jcubic.pl) <jcubic@onet.pl><br/>
+Copyright (C) 2020-2023 [Jakub T. Jankiewicz](https://jcubic.pl/me) <jcubic@onet.pl><br/>
 Released with MIT License
