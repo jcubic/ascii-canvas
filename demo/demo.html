@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="Description" content=""/>
+    <link rel="shortcut icon" href=""/>
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--
+    <link href="css/style.css" rel="stylesheet"/>
+    -->
+    <style>
+body, html {
+    height: 100%;
+}
+body {
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+canvas {
+    display: block;
+    height: 100%;
+    margin: 0;
+}
+.off-site {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.char {
+    font-family: monospace;
+    font-size: 14px;
+}
+    </style>
+    <!--<script type="module" src="../src/index.js"></script>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<canvas></canvas>
+<div class="off-site">
+    <span class="char">m</span>
+</div>
+    <script type="module" src="index.js">
+
+    </script>
+</body>
+</html>
