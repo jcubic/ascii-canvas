@@ -30,7 +30,7 @@ import { Canvas, Item } from '../src/index.js';
 import { ROWS, COLS, from_ansi } from './terminal.js';
 
 
-const canvas = new Canvas(45, ROWS);
+const canvas = new Canvas(100, ROWS);
 
 const str = boxen('unicorn', { padding: 1 });
 
@@ -61,7 +61,7 @@ function plot() {
     return from_ansi(plot);
 }
 
-canvas.append(new Item(plot(), {x: 55, y: 3}));
+canvas.append(new Item(plot(), {x: 45, y: 3}));
 canvas.append(new Item(stringifyTree(tree, t => t.name, t => t.children), {x: 5, y: 14}));
 
 console.log(canvas.toString());
