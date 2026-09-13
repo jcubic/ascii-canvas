@@ -8,7 +8,7 @@
 
 <div align="center">
 
-[![npm](https://img.shields.io/badge/npm-0.4.0-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
+[![npm](https://img.shields.io/badge/npm-0.5.0-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
 [![CI](https://github.com/jcubic/ascii-canvas/actions/workflows/test.yml/badge.svg)](https://github.com/jcubic/ascii-canvas/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/jcubic/ascii-canvas/badge.svg?branch=master)](https://coveralls.io/github/jcubic/ascii-canvas?branch=master)
 [![LICENSE MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jcubic/ascii-canvas/blob/master/LICENSE)
