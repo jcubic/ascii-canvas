@@ -8,7 +8,9 @@
 
 <div align="center">
 
-[![npm](https://img.shields.io/badge/npm-0.3.0-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
+[![npm](https://img.shields.io/badge/npm-0.4.0-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
+[![CI](https://github.com/jcubic/ascii-canvas/actions/workflows/test.yml/badge.svg)](https://github.com/jcubic/ascii-canvas/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/jcubic/ascii-canvas/badge.svg?branch=master)](https://coveralls.io/github/jcubic/ascii-canvas?branch=master)
 [![LICENSE MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jcubic/ascii-canvas/blob/master/LICENSE)
 
 </div>
@@ -17,6 +19,9 @@
 
 I can be used with Node.js or a browser to render ASCII text. I can be used with other ASCII libraries
 like charts and position them on the screen.
+
+Written in TypeScript and published with type definitions, ESM and CommonJS builds, and a minified
+UMD bundle for the browser.
 
 ## Installation
 
@@ -39,7 +44,7 @@ import { Canvas, Item } from 'ascii-canvas';
 ```html
 <script src="https://unpkg.com/ascii-canvas"></script>
 <script>
-const { Canvas, Item } = canvas;
+  const { Canvas, Item } = canvas;
 </script>
 ```
 
@@ -69,19 +74,19 @@ console.log(my_canvas.toString());
 
 // functions to render box frame
 function rep(str, count) {
-    return new Array(count).fill(str).join('');
+  return new Array(count).fill(str).join('');
 }
 
 function frame() {
-    const output = [];
-    const x_count = COLS - 2;
-    const y_Count = ROWS - 2;
-    output.push(`+${rep('-', x_count)}+`);
-    for (let i = 0; i < y_Count; ++i) {
-        output.push(`|${rep(' ', x_count)}|`);
-    }
-    output.push(`+${rep('-', x_count)}+`);
-    return output.join('\n');
+  const output = [];
+  const x_count = COLS - 2;
+  const y_Count = ROWS - 2;
+  output.push(`+${rep('-', x_count)}+`);
+  for (let i = 0; i < y_Count; ++i) {
+    output.push(`|${rep(' ', x_count)}|`);
+  }
+  output.push(`+${rep('-', x_count)}+`);
+  return output.join('\n');
 }
 ```
 
@@ -98,13 +103,13 @@ git clone https://github.com/jcubic/ascii-canvas.git
 cd ascii-canvas
 # install dev dependencies (including example ASCII libraries)
 npm install
-# run the code
-node --experimental-modules ./demo/demo.js
+# build the library then run the demo
+npm run demo
 ```
 
 ## API
 
-* **Canvas**
+- **Canvas**
 
 ```javascript
 class Canvas {
@@ -117,7 +122,7 @@ class Canvas {
 }
 ```
 
-* **Item**
+- **Item**
 
 ```javascript
 class Item {
@@ -136,22 +141,38 @@ class Item {
 ```
 
 ## Changelog
+
+### 0.4.0
+
+- rewrite the library in TypeScript, published with type definitions
+- build with tsdown, producing ESM and CommonJS output plus a minified UMD bundle
+- fix `Item::remove` calling a non-existent `Canvas::remove_child` (it now calls `Canvas::remove`)
+
 ### 0.3.0
-* add Canvas::resize
-* add read only Canvas::children
-* add overflow option to Canvas
-* fix negative y when rendering item
-* add read only Item::rect/width/height
-* rename Canvas::remove_child() to Canvas::remove()
+
+- add Canvas::resize
+- add read only Canvas::children
+- add overflow option to Canvas
+- fix negative y when rendering item
+- add read only Item::rect/width/height
+- rename Canvas::remove_child() to Canvas::remove()
+
 ### 0.2.0
-* add Item::remove
-* fix Item::clone
+
+- add Item::remove
+- fix Item::clone
+
 ### 0.1.2
-* throw exception when x or y outside of Canvas dimensions
+
+- throw exception when x or y outside of Canvas dimensions
+
 ### 0.1.1
-* fix infinite loop when x or y is float
+
+- fix infinite loop when x or y is float
+
 ### 0.1.0
-* Initial version
+
+- Initial version
 
 ## License
 

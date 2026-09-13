@@ -1,30 +1,7 @@
 {
   "name": "ascii-canvas",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "String based text rendering for Node and Browser",
-  "type": "module",
-  "main": "./src/index.js",
-  "unpkg": "./dist/umd.min.js",
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "^7.22.5",
-    "@babel/preset-env": "^7.22.5",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^9.1.2",
-    "boxen": "^7.1.0",
-    "ervy": "^1.0.7",
-    "jquery.terminal": "^2.36.0",
-    "stringify-tree": "^1.1.1",
-    "webpack": "^5.88.1",
-    "webpack-cli": "^5.1.4"
-  },
-  "scripts": {
-    "webpack": "webpack --mode production --config webpack.config.cjs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jcubic/ascii-canvas.git"
-  },
   "keywords": [
     "string",
     "terminal",
@@ -35,10 +12,71 @@
     "draw",
     "canvas"
   ],
+  "homepage": "https://jcubic.github.io/ascii-canvas/",
   "bugs": {
     "url": "https://github.com/jcubic/ascii-canvas/issues"
   },
-  "homepage": "https://jcubic.github.io/ascii-canvas/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcubic/ascii-canvas.git"
+  },
+  "license": "MIT",
   "author": "Jakub T. Jankiewicz <jcubic@onet.pl> (https://jcubic.pl/jakub-jankiewicz/)",
-  "license": "MIT"
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "unpkg": "./dist/index.umd.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test",
+    "publint": "publint",
+    "prepublishOnly": "npm run build && npm run publint",
+    "demo": "npm run build && node ./demo/demo.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vitest/coverage-v8": "^5.0.0",
+    "boxen": "^7.1.0",
+    "ervy": "^1.0.7",
+    "jquery.terminal": "^2.36.0",
+    "oxlint": "^1.82.0",
+    "prettier": "^3.9.6",
+    "publint": "^0.3.24",
+    "stringify-tree": "^1.1.1",
+    "tsdown": "^0.23.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
+  }
 }

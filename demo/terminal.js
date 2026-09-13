@@ -12,20 +12,20 @@ export const COLS = 80;
 
 // mocking jQuery & jQuery Terminal
 export const jquery = {
-    terminal: {
-        defaults: {
-            formatters: []
-        },
-        substring: (str, start, end) => str.substring(start, end),
-        strip: x => x,
-        active: () => ({
-            rows: () => ROWS,
-            cols: () => COLS
-        }),
-        unescape_brackets: x => x
+  terminal: {
+    defaults: {
+      formatters: [],
     },
-    fn: { terminal: () => {}},
-    extend: Object.assign
+    substring: (str, start, end) => str.substring(start, end),
+    strip: (x) => x,
+    active: () => ({
+      rows: () => ROWS,
+      cols: () => COLS,
+    }),
+    unescape_brackets: (x) => x,
+  },
+  fn: { terminal: () => {} },
+  extend: Object.assign,
 };
 
 const window = {};

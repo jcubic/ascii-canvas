@@ -5,4 +5,5 @@
  * Relased under MIT license
  */
 
-export const auto = Symbol('auto');
+export const auto: unique symbol = Symbol('auto');
+export type Auto = typeof auto;

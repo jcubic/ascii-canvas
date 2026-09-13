@@ -11,24 +11,26 @@ import pkg from 'stringify-tree';
 const { stringifyTree } = pkg;
 
 const tree = {
-    name: "Grandmarti", children: [
+  name: 'Grandmarti',
+  children: [
+    {
+      name: 'Cyndi',
+      children: [
         {
-            name: "Cyndi", children: [
-                {
-                    name: "Jess", children: [
-                        { name: "Evelyn", children: [] },
-                        { name: "Linda", children: [] },
-                    ],
-                },
-            ],
+          name: 'Jess',
+          children: [
+            { name: 'Evelyn', children: [] },
+            { name: 'Linda', children: [] },
+          ],
         },
-        { name: "Celia", children: [] },
-    ],
+      ],
+    },
+    { name: 'Celia', children: [] },
+  ],
 };
 
-import { Canvas, Item } from '../src/index.js';
+import { Canvas, Item } from '../dist/index.js';
 import { ROWS, COLS, from_ansi } from './terminal.js';
-
 
 const canvas = new Canvas(100, ROWS);
 
@@ -44,24 +46,32 @@ for (var i = 0; i < 3; ++i) {
   canvas.append(box);
 }
 
-
 function plot() {
-    // based on ervy demo.js
-    const data = [];
+  // based on ervy demo.js
+  const data = [];
 
-    for (let i = 1; i < 17; i++) {
-        if (i < 6) {
-            data.push({ key: 'Hash', value: [i, i], style: '#' });
-        } else {
-            data.push({ key: 'Asterisk', value: [i, 6], style: '*' });
-        }
+  for (let i = 1; i < 17; i++) {
+    if (i < 6) {
+      data.push({ key: 'Hash', value: [i, i], style: '#' });
+    } else {
+      data.push({ key: 'Asterisk', value: [i, 6], style: '*' });
     }
+  }
 
-    const plot = ervy.scatter(data, { legendGap: 18, width: 15 });
-    return from_ansi(plot);
+  const plot = ervy.scatter(data, { legendGap: 18, width: 15 });
+  return from_ansi(plot);
 }
 
-canvas.append(new Item(plot(), {x: 45, y: 3}));
-canvas.append(new Item(stringifyTree(tree, t => t.name, t => t.children), {x: 5, y: 14}));
+canvas.append(new Item(plot(), { x: 45, y: 3 }));
+canvas.append(
+  new Item(
+    stringifyTree(
+      tree,
+      (t) => t.name,
+      (t) => t.children,
+    ),
+    { x: 5, y: 14 },
+  ),
+);
 
 console.log(canvas.toString());
