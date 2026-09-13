@@ -68,9 +68,9 @@
   "dependencies": {},
   "devDependencies": {
     "@vitest/coverage-v8": "^5.0.0",
-    "boxen": "^7.1.0",
+    "boxen": "^8.0.1",
     "ervy": "^1.0.7",
-    "jquery.terminal": "^2.36.0",
+    "jquery.terminal": "^2.47.0",
     "oxlint": "^1.82.0",
     "prettier": "^3.9.6",
     "publint": "^0.3.24",
