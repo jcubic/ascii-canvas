@@ -1,11 +1,21 @@
-![ASCII Canvas Logo](https://github.com/jcubic/ascii-canvas/blob/master/assets/logo.svg?raw=true)
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/jcubic/ascii-canvas/blob/master/.github/logo-dark.svg?raw=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/jcubic/ascii-canvas/blob/master/.github/logo.svg?raw=true" />
+    <img alt="ASCII Canvas Logo" src="https://github.com/jcubic/ascii-canvas/blob/master/.github/logo.svg?raw=true" />
+  </picture>
+</h1>
+
+<div align="center">
 
 [![npm](https://img.shields.io/badge/npm-0.3.0-blue.svg)](https://www.npmjs.com/package/ascii-canvas)
 [![LICENSE MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jcubic/ascii-canvas/blob/master/LICENSE)
 
+</div>
+
 [ASCII canvas is library that help position elements on the screen](https://github.com/jcubic/ascii-canvas).
 
-I can be used with Node.js or Browser to render ASCII Text. I can be used with other ASCII libraries
+I can be used with Node.js or a browser to render ASCII text. I can be used with other ASCII libraries
 like charts and position them on the screen.
 
 ## Installation
@@ -75,12 +85,12 @@ function frame() {
 }
 ```
 
-![Terminal Screenshot](https://github.com/jcubic/ascii-canvas/blob/master/assets/screenshot.png?raw=true&nocache=1)
+![Terminal Screenshot](https://github.com/jcubic/ascii-canvas/blob/master/.github/screenshot.png?raw=true&nocache=1)
 
 ## Demo
 
 [Browser Demo](https://codepen.io/jcubic/pen/xxZebyK).
-To see demo in Node.js you need to do those steps.
+To see a demo in Node.js, you need to do those steps.
 
 ```bash
 # clone repo
@@ -145,5 +155,5 @@ class Item {
 
 ## License
 
-Copyright (C) 2020-2023 [Jakub T. Jankiewicz](https://jcubic.pl/me) <jcubic@onet.pl><br/>
+Copyright (C) 2020-2026 [Jakub T. Jankiewicz](https://jakub.jankiewicz.org)<br/>
 Released with MIT License
